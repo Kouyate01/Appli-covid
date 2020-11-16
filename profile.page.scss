@@ -1,0 +1,47 @@
+ion-content{
+    
+
+ .header {
+    height: 180px;
+    background-color: forestgreen;
+    width: 100%;
+    padding-top: 1px;
+
+      h4 {
+       color: white;
+       text-align: center;
+       font-weight: bold;
+       font-size:18px;
+    }
+    .space-between {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0px 10px;
+   }
+   .followings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        .followings p {
+       color: white;
+       margin: 8px 0px 0px 0px;
+   }
+}
+
+
+
+}
+
+
+h4{
+    font-size:16px;
+    color:forestgreen;
+}
+
+ion-card{
+    border-radius:10px;
+}
+
+
+}

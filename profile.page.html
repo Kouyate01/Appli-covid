@@ -1,0 +1,236 @@
+
+
+<ion-content>
+  <ion-refresher slot="fixed" disabled="false" (ionRefresh)="reload($event)">  
+    <ion-refresher-content  
+    pullingIcon="arrow-dropdown"  
+    pullingText="Pull to refresh"  
+    refreshingSpinner="dots"  
+   ></ion-refresher-content>  
+  </ion-refresher> 
+
+
+<div class="header">
+
+  
+
+  <div class="space-between">
+
+
+      <div class="followings">
+
+          <ion-buttons fill="clear" slot="start">
+
+               <ion-menu-button color="light"></ion-menu-button>
+            
+          </ion-buttons>
+     
+        
+     </div>
+
+      <div class="followings">
+
+             <ion-button fill="clear" (click)="openModal()">
+
+                   <ion-icon color="light" mode="ios" name="call"></ion-icon>
+               
+             </ion-button> 
+         
+      </div>
+
+
+  
+  </div>
+
+    <h4> {{ProfileInfo?.nom}} {{ProfileInfo?.prenom}} </h4>
+
+</div>
+
+<h4 class="ion-padding" style="color: forestgreen;"> <b>Mes Informations</b></h4>
+
+<ion-card *ngIf="isConn==true">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+         
+          <ion-icon name="call-sharp" size="large"></ion-icon>  : 
+      </ion-col>
+      <ion-col size="8">
+        
+         <h4>{{ProfileInfo?.numero_de_telephone}}</h4>
+
+      </ion-col>
+    </ion-row>
+
+     <ion-row>
+       <ion-col size="4">
+         
+           <ion-icon name="briefcase-sharp" size="large"></ion-icon> :
+
+       </ion-col>
+       <ion-col size="8">
+         
+          <h4>{{ProfileInfo?.fonction}}</h4>
+
+       </ion-col>
+     </ion-row>
+
+      <ion-row>
+         <ion-col size="4">
+           
+             <ion-icon name="business-sharp" size="large"></ion-icon> :
+
+
+         </ion-col>
+
+         <ion-col  size="8">
+            
+              <h4> {{ProfileInfo?.lieu_habitation}} </h4> 
+
+         </ion-col>
+      </ion-row>
+   
+      <ion-row>
+          <ion-col size="4">
+
+             <ion-icon name="mail-open-sharp" size="large"></ion-icon> : 
+            
+          </ion-col>
+          <ion-col size="8">
+
+                <h4> {{ProfileInfo?.email}} </h4> 
+            
+          </ion-col>
+      </ion-row>
+   
+    <ion-row>
+      
+       <ion-col size="4">
+         
+         <ion-icon name="male-female-sharp" size="large"></ion-icon> :
+       </ion-col>
+
+       <ion-col size="8">
+         
+         <h4>{{ProfileInfo?.genre}} </h4>
+
+       </ion-col>
+
+    </ion-row>
+  </ion-grid>
+   
+
+</ion-card>
+
+
+<ion-card *ngIf="isConn==false">
+
+
+
+   <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+         
+          <ion-icon name="call-sharp" size="large"></ion-icon>  : 
+      </ion-col>
+      <ion-col size="8">
+        
+         <h4>{{ProfileInfo?.phone}}</h4>
+
+      </ion-col>
+    </ion-row>
+
+     <ion-row>
+       <ion-col size="4">
+         
+           <ion-icon name="briefcase-sharp" size="large"></ion-icon> :
+
+       </ion-col>
+       <ion-col size="8">
+         
+          <h4>{{ProfileInfo?.fonction}}</h4>
+
+       </ion-col>
+     </ion-row>
+
+      <ion-row>
+         <ion-col size="4">
+           
+             <ion-icon name="business-sharp" size="large"></ion-icon> :
+
+
+         </ion-col>
+
+         <ion-col  size="8">
+            
+              <h4> {{ProfileInfo?.location}} </h4> 
+
+         </ion-col>
+      </ion-row>
+   
+      <ion-row>
+          <ion-col size="4">
+
+             <ion-icon name="mail-open-sharp" size="large"></ion-icon> : 
+            
+          </ion-col>
+          <ion-col size="8">
+
+                <h4> {{ProfileInfo?.email}} </h4> 
+            
+          </ion-col>
+      </ion-row>
+   
+    <ion-row>
+      
+       <ion-col size="4">
+         
+         <ion-icon name="male-female-sharp" size="large"></ion-icon> :
+       </ion-col>
+
+       <ion-col size="8">
+         
+         <h4>{{ProfileInfo?.sexe}} </h4>
+
+       </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+  
+
+</ion-card>
+
+<h4 class="ion-padding" style="color: forestgreen;"> <b>Mon status</b></h4>
+<h5 class="ion-padding">Status: <b>Sain</b></h5> 
+   
+
+
+
+
+<h4 class="ion-padding" style="color: forestgreen;"> <b>Mon code QR</b></h4>
+
+  <ion-icon name="qr-scanner" size="large"></ion-icon>
+
+
+
+
+  
+
+ <div class="ion-padding">
+   
+       <ion-button expand="full" color="success" shape="round">
+          Modifier mes informations
+       </ion-button>
+
+        <ion-button expand="full" color="primary" shape="round" (click)="deconnecte()">
+          déconnexion
+       </ion-button>
+
+ </div>
+
+
+
+</ion-content>

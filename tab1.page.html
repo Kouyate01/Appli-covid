@@ -1,0 +1,63 @@
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-refresher slot="fixed" disabled="false" (ionRefresh)="doRefresh($event)">  
+    <ion-refresher-content  
+    pullingIcon="arrow-dropdown"  
+    pullingText="Pull to refresh"  
+    refreshingSpinner="dots"  
+   ></ion-refresher-content>  
+  </ion-refresher>     
+
+
+<div class="svg">
+    <br>
+    <ion-title padding color="light"> Anti</ion-title>
+    <ion-title padding  color="light"> <b>Covid-19</b> </ion-title>
+    <br>
+     <ion-buttons slot="end">
+
+           <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+</div>
+ 
+ 
+  <br>
+  <h1 size="large"  style="margin-left: 25%"><b>World Statistics</b></h1>
+
+
+
+  <canvas #mychart width="400" height="400">  </canvas>
+  
+
+      <ion-text padding color="primary"  >
+
+          <h1  style="margin-left: 5%" > <b> Cas confirmés </b> </h1>
+          <h5  style="margin-left: 5%">{{info?.cases | number}}  Personnes</h5>
+        
+      </ion-text>
+
+
+
+      <ion-text padding color="danger"  style="margin-left: 5%" >
+
+          <h1  style="margin-left: 5%"> <b> Nombre de Morts </b> </h1>
+          <h5   style="margin-left: 5%">{{info?.deaths | number}}  personnes </h5>
+        
+      </ion-text>
+ 
+
+ 
+   
+
+    <ion-text padding color="success"  style="margin-left: 10%" >
+
+          <h1  style="margin-left: 5%" > <b>Nombre de guérisons </b> </h1>
+          <h5  style="margin-left: 5%">{{info?.recovered | number}} personnes</h5> 
+        
+      </ion-text>
+
+
+  
+</ion-content>

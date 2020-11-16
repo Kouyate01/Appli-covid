@@ -1,0 +1,49 @@
+ion-content  {
+
+
+
+  
+    .content{
+
+
+        .svg{
+
+             width:50%;
+             heigth:10vh;
+             border-bottom-right-radius:2000px;
+             background-color:forestgreen;
+
+
+
+      }
+
+        background:white;
+        width:100%;
+        height:100vh;
+        ion-title{
+
+            font-size:20px;
+        }
+
+        .description{
+
+            
+            border-radius:10px;
+            width:95%;
+
+            h5{
+
+                color:black;
+
+            }
+
+            ion-icon{
+ 
+
+               color:forestgreen;
+
+            }
+           
+        }
+    }
+}

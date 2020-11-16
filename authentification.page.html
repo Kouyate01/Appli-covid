@@ -1,0 +1,36 @@
+
+
+<ion-content>
+
+      <div class="clean">
+    
+      </div>
+
+     <form [formGroup]="myform" style="margin-top: 40%">
+       
+        <div class="ion-padding">
+           <ion-list>
+
+                <ion-item>
+                  <input  formControlName="email" type="email" placeholder="@gmail.com"  >
+                </ion-item>
+
+                 <br>
+
+                  <ion-item>
+
+                  <input  formControlName="password" type="password" placeholder="mot de passe"  >
+
+                </ion-item>
+
+           </ion-list>
+            <ion-button size="large" expand="full" fill="solid" color="success" shape="round" (click)="onSubmit()" [disabled]="!myform.valid"> Se connecter</ion-button>
+
+             <br>
+
+            <ion-button size="large" expand="full" fill="solid" shape="round" color="danger" routerLink="/inscription">Creez un compte </ion-button>
+
+       </div>
+     </form>
+
+</ion-content>

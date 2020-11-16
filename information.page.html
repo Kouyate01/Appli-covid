@@ -1,0 +1,76 @@
+
+
+<ion-content >
+
+
+<ion-refresher slot="fixed" disabled="false" (ionRefresh)="doRefresh($event)">  
+            <ion-refresher-content  
+            pullingIcon="arrow-dropdown"  
+            pullingText="Pull to refresh"  
+            refreshingSpinner="dots"  
+           ></ion-refresher-content> 
+            
+  </ion-refresher> 
+
+
+
+ <div class="svg" >
+    <br>
+    <ion-title padding color="light"> Covid-19</ion-title>
+    <ion-title padding  color="light"> <b>{{nom}}</b> </ion-title>
+    <br>
+
+   </div> 
+
+
+ 
+  <ion-card>
+          <canvas width="300" height="300" #mychart>
+            
+
+
+          </canvas>
+  </ion-card>
+
+
+ 
+
+
+           <ion-text padding >  <h1 style="margin-left: 7%;color:forestgreen">  Globalement   </h1>  </ion-text>
+
+           <ion-text  padding > <h6 style="margin-left: 7%">  Cas :  {{countryDetail?.cases |number}}   personnes </h6> </ion-text>
+
+           <ion-text  padding > <h6 style="margin-left: 7%"> Mort :   {{countryDetail?.deaths |number}}  personnes </h6></ion-text>
+
+           <ion-text  padding > <h6 style="margin-left: 7%"> Guerrison :     {{countryDetail?.recovered |number}}  personnes</h6></ion-text>
+
+           <ion-text  padding > <h6 style="margin-left: 7%"> Malade :     {{countryDetail?.active |number}}  personnes</h6></ion-text>
+
+           <ion-text  padding > <h6 style="margin-left: 7%"> Cas critque :    {{countryDetail?.critical |number}}  personnes</h6></ion-text>
+
+
+
+
+           <ion-text padding >  <h1 style="margin-left: 7%;color: forestgreen">  Aujourd'hui  </h1>  </ion-text>
+
+
+          <ion-text  padding > <h6 style="margin-left: 7%">  Total des cas  :      {{countryDetail?.todayCases |number }}  personnes</h6></ion-text>
+
+          <ion-text  padding > <h6 style="margin-left: 7%">  Total des decès :      {{countryDetail?.todayDeaths |number}}  personnes</h6></ion-text>
+
+
+
+
+
+  
+
+
+
+
+
+ 
+
+</ion-content>
+
+
+

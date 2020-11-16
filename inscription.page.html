@@ -1,0 +1,100 @@
+<ion-content>
+
+   
+        <b class="ion-padding" color="danger" *ngIf="contact!=''" style="margin-left:1%;color: red"> {{contact}}</b>
+        <br>
+        <b class="ion-padding" color="danger" *ngIf="message!=''" style="margin-left: 2%;color: red"> {{message}}</b>
+        
+
+  <form [formGroup]="myform">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          
+          <div padding>
+            <ion-item>
+              <input  formControlName="name"  type="text" placeholder="Nom"  >
+            </ion-item>
+            <ion-item>
+              <input  formControlName="prenom" type="prenom" placeholder="Prenom"  >
+            </ion-item>
+
+             <ion-item>
+              <input  formControlName="email" type="email" placeholder="@gmail.com"  >
+            </ion-item>
+
+
+             <ion-item>
+              <input  formControlName="habitation" type="text" placeholder="Lieu d'habitation"  >
+            </ion-item>
+
+            <ion-item>
+              <input  formControlName="fonction" type="text" placeholder="fonction (ex: etudiant)"  >
+            </ion-item>
+
+
+             <ion-item>
+
+              <input  formControlName="password" type="password" placeholder="mot de passe"  >
+
+            </ion-item>
+
+            
+            <ion-item>
+                      
+                <ion-select placeholder="sexe" interface="alert" required formControlName="sexe">
+
+                        <ion-select-option value="M">homme</ion-select-option>
+                        <ion-select-option value="F">Femme</ion-select-option>
+                </ion-select>
+
+            </ion-item>
+
+            <ion-grid>
+              
+
+              <ion-row>
+                
+                   <ion-col size="4">
+                     
+                      <ion-item>
+                      
+                      <ion-select placeholder="ci" interface="action-sheet" required>
+
+                        <ion-select-option value="+225">ci</ion-select-option>
+                        <ion-select-option value="---">other</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                   </ion-col>
+                   <ion-col size="8">
+
+
+                         <ion-item>
+
+                                <ion-input  type="text" formControlName="phone"  placeholder="telephone" required></ion-input>
+                          
+                          </ion-item>
+                     
+
+                   </ion-col>
+              </ion-row>
+
+            </ion-grid>
+            
+            
+          </div>
+          <div padding>
+            <ion-button  size="large" (click)="onSubmit()" [disabled]="!myform.valid" color="success" expand="block" shape="round">s'inscrire</ion-button>
+          </div>
+          <br>
+          <div padding>
+            <ion-button  size="large"   color="danger" expand="block" shape="round" routerLink="/authentification">se connecter</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+       
+</ion-content>
